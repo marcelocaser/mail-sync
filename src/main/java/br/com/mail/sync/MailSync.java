@@ -216,10 +216,10 @@ public class MailSync implements ApplicationRunner {
             List<TwebprofilesTO> twebprofilesTOs = profilesNegocio.listarContasParaSincronizacaoPartial();
             logger.atInfo().log("Reading %s accounts at PARTIAL sync...", twebprofilesTOs.size());
             /*new ProxyUtil()
-                    .host("10.5.100.10")
-                    .port("3130")
-                    .user("")
-                    .password("")
+                    .host(twebpreferenciasTO.getServidorProxy())
+                    .port(twebpreferenciasTO.getPortaProxy())
+                    .user(twebusuariosTO.getUsuarioProxy())
+                    .password(twebusuariosTO.getSenhaProxy())
                     .noProxyHosts(twebpreferenciasTO.getNaoUsarServidorProxy())
                     .authenticate()
                     .noSSL();*/
