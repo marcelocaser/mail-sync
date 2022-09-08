@@ -131,8 +131,8 @@ public class MailSync implements ApplicationRunner {
                 logger.atInfo().log("Reading %s accounts at FULL sync...", twebprofilesTOs.size());
                 if (twebpreferenciasTO != null && Twebpreferencias.TwebpreferenciasStatus.SIM.getStatusToChar().equals(twebpreferenciasTO.getUtilizaProxy())) {
                     new ProxyUtil()
-                            .host("10.5.100.10")
-                            .port("3130")
+                            .host(twebpreferenciasTO.getServidorProxy())
+                            .port(twebpreferenciasTO.getPortaProxy())
                             .user(twebusuariosTO.getUsuarioProxy())
                             .password(twebusuariosTO.getSenhaProxy())
                             .noProxyHosts(twebpreferenciasTO.getNaoUsarServidorProxy())
@@ -490,10 +490,10 @@ public class MailSync implements ApplicationRunner {
     /*final void sendMail() {
         try {
             new ProxyUtil()
-                    .host("10.5.100.10")
-                    .port("3130")
-                    .user("marcelo.2544")
-                    .password("@marcelo369")
+                    .host(twebpreferenciasTO.getServidorProxy())
+                    .port(twebpreferenciasTO.getPortaProxy())
+                    .user(twebusuariosTO.getUsuarioProxy())
+                    .password(twebusuariosTO.getSenhaProxy())
                     .noProxyHosts("")
                     .authenticate()
                     .noSSL();
