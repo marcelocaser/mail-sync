@@ -86,14 +86,14 @@ public class MailSync implements ApplicationRunner {
     Twebpreferencias preferenciasNegocio;
     @Autowired
     Twebscheduls schedulerNegocio;
-    
+
     private TwebusuariosTO twebusuariosTO;
 
     private static final FluentLogger logger = FluentLogger.forEnclosingClass();
     private static final String APPLICATION_NAME = "mail-sync-cifarma";
     //private static final JacksonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
     private static final String TOKENS_DIRECTORY_PATH = "tokens";
-    
+
     @Bean
     public void setProxy() {
         try {
