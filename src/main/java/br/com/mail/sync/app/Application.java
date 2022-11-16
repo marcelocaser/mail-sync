@@ -158,6 +158,7 @@ public class Application {
         properties.setProperty(PersistenceUnitProperties.LOGGING_SESSION, "true");
         properties.setProperty(PersistenceUnitProperties.LOGGING_PARAMETERS, "true");
         properties.setProperty(PersistenceUnitProperties.NATIVE_SQL, "true");
+        properties.setProperty(PersistenceUnitProperties.LOGGING_LOGGER, "org.eclipse.persistence.logging.slf4j.SLF4JLogger");
         return properties;
     }
 
